@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typing Practice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Typing Practice</h1>
+  
+    <select id="colorThemeSelector">
+        <option value="black">Black</option>
+        <option value="grey">Grey</option>
+    </select>
+    <select id="textColorSelector">
+        <option value="tgreen">Green</option>
+        <option value="twhite">White</option>
+        <option value="tred">Red</option>
+        <option value="tblue">Blue</option>
+        <option value="tyellow">Yellow</option>
+    </select>
+    
+    <nav>
+        <button id="wordsMode">Words</button>
+        <button id="lettersMode">Letters</button>
+        <button id="numbersMode">Numbers</button>
+    </nav>
+
+    <div id="progressContainer">
+        <div id="progressBar"></div>
+    </div>
+    
+
+    <div id="exerciseText"></div>
+    <input type="text" id="userInput" autocomplete="off" />
+    <div id="detailedFeedback"></div>
+    <div id="results"></div>
+
+    <button id="restartButton">Restart</button>
+
+    <div id="attemptDetails">
+        <!-- Placeholder for the attempts table, if it's not dynamically created -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

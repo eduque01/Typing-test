@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap');
+
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--main-color); /* Default to dark background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: var(--text-color); 
+}
+
+select#colorThemeSelector {
+    position: absolute;  /* Positioning the element absolutely */
+    top: 20px;           /* 20px from the top of the parent container */
+    left: 20px;          /* 20px from the left of the parent container */
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF(255, 255, 255);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    
+}
+
+
+/* Style for the dropdown options */
+select#colorThemeSelector option {
+    
+    background-color: #262626; /* Slightly lighter color for options */
+    color: #FFFFFF; /* Light color for the text */
+    margin-left: 1000px;
+}
+
+.parent-container {
+    position: relative; /* Ensure the parent container has relative positioning */
+}
+
+#textColorSelector {
+    position: absolute; /* Positioning the element absolutely */
+    top: 20px;          /* 20px from the top of the parent container */
+    right: 20px;        /* 20px from the right of the parent container */
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+
+/* Style for the dropdown options */
+select#textColorSelector option {
+    background-color: #262626; /* Slightly lighter color for options */
+    color: #FFFFFF; /* Light color for the text */
+    margin-left: 1000px;
+}
+
+#exerciseText, #userInput, #results, #attemptDetails, table {
+    max-width: 800px;
+    width: 90%;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1C1C1C;
+    color: var(--text-color);
+    padding: 20px;
+    font-size: 20px;
+}
+
+#exerciseText {
+    margin-bottom: 20px;
+    background-color: #1C1C1C; /* Darker element backgrounds */
+    padding: 20px;
+    font-size: 24px;
+    text-align: left;
+    border: none;
+    color: var(--text-color); /* Bright text */
+}
+
+#userInput {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: #1C1C1C; /* Darker element backgrounds */
+    color: var(--text-color);  /* Bright text */
+}
+
+#results {
+    padding: 15px;
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: 600;
+    background-color: #1C1C1C; /* Darker element backgrounds */
+}
+
+#restartButton, #wordsMode, #lettersMode,  #numbersMode{
+    padding: 10px 20px;
+    border: 2px solid var(--text-color);
+    background-color: #1C1C1C;
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#restartButton:hover , #wordsMode:hover, #lettersMode:hover, #numbersMode:hover {
+    background-color: #6e6c6c6b;
+    transform: scale(1.05);
+}
+
+#userInput.error, #userInput.error-bg {
+    border-color: #D32F2F !important;
+    background-color: #3E0C0C; /* Dark red background for errors */
+}
+
+.mistake-highlight {  
+    color: #D32F2F; /* Red highlights for mistakes */
+    border-bottom: 2px solid #D32F2F;
+}  
+
+.feedback-panel {
+    background-color: #ECEFF1;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#progressContainer {
+    width: 70%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#progressBar {
+    height: 10px;
+    width: 0%;
+    background-color: var(--text-color);
+    border-radius: 5px;
+    transition: width 0.5s;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid; /* Bright borders */
+    color: var(--text-color);  /* Bright text */
+}
+
+th {
+    background-color: #1C1C1C; /* Dark header backgrounds */
+    color: var(--text-color); ; /* Bright text */
+}
+
+tr:nth-child(even) {
+    background-color: #262626; /* Slightly lighter row background for contrast */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #exerciseText, #userInput, #results, #attemptDetails, table {
+        width: 100%;
+    }
+}
+    :root {
+        --white: #ffffff; /* White */
+        --black: #121212; /* Black */
+        --main-color: var(--black); /* Default background color */
+        --text-color: #0F0; /* Default text color */
+    }
+    
+.twhite {
+    --text-color: #ffffff; /* Example light green color */
+}
+
+.tred {
+    --text-color: #ff1111; /* Example dark green color */
+}
+
+.tgreen {
+    --text-color: #0F0; /* Example lime green color */
+}
+.tblue {
+    --text-color: rgb(0, 195, 255); /* Example blue color */
+}
+.tyellow {
+    --text-color: rgb(229, 255, 0); /* Example yellow color */
+}
+
+
+
+.grey {
+    --main-color: #9b9999; /* White */
+}
+.black {
+    --main-color: #121212; /* Black */
+}
